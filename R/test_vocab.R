@@ -7,8 +7,6 @@
 test_vocab <- function() {
   set.seed(as.numeric(Sys.time()))
 
-  # TODO: make sure vocab works when package is loaded
-
   choices_idx <- sample(nrow(vocab), 3)
   answer_idx <- sample(choices_idx, 1)
   q <- sprintf("What does %s mean?", vocab$test[answer_idx])
