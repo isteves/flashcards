@@ -7,7 +7,9 @@
 
 <!-- badges: end -->
 
-The goal of flashcards is to bring some Hebrew into my daily R work.
+The goal of flashcards is to bring some Hebrew into my daily R work. All
+these words are gathered on the job, so they tend to be related to data
+science / fraud / e-commerce / programming.
 
 ## Installation
 
@@ -31,11 +33,11 @@ test_vocab()
 It prompts you for the definition of a vocab word and gives three
 choices to choose from. For example, like this:
 
-    What does תתפנו mean? 
+    What does מדבג mean? 
     
-    1: manual
-    2: to evacuate, have time
-    3: negative
+    1: to separate
+    2: indication
+    3: debug
     
     Selection: <enter your selection>
 
@@ -53,7 +55,7 @@ Want to test yourself on your own vocabulary? For the time being, the
 easiest way is the following:
 
 1.  Clone the repo
-2.  Replace ‘data-raw/vocab.tsv’ with a tsv file of your choice. It
+2.  Replace `data-raw/vocab.tsv` with a tsv file of your choice. It
     should contain two columns with the following names: `test` (the
     word that is new to you) and `reference` (the definition)
 3.  Run the `vocab.R` script (edit if needed)
