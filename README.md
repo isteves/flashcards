@@ -46,8 +46,17 @@ To be prompted with a vocab word every time you restart R, use
 add the following line:
 
 ``` r
-if(interactive()) flashcards::test_vocab()
+if(interactive()) {
+  setHook("rstudio.sessionInit", function(...) {
+    flashcards::test_vocab()
+  })
+}
 ```
+
+The setHook command is needed because the `utils::menu()` function
+within `test_vocab()` interrupts the RStudio set-up processes. (Thanks
+to Kevin Ushey for the solution…more details on [RStudio
+Community](https://community.rstudio.com/t/view-error-when-utils-menu-is-run-in-rprofile/53646/2).)
 
 ## Customizing the package
 
